@@ -295,8 +295,8 @@ async function inlineHTML (html, distDir, curDir, minify) {
     const src = el.attr('href');
     if (src && !isAbsolute(src)) {
       const filePath = urlToPath(distDir, curDir, src);
-      filesToRemove(filePath);
-      filesToRemove(`${filePath}.map`);
+      filesToRemove.push(filePath);
+      filesToRemove.push(`${filePath}.map`);
       let styleIn = await readFile(filePath, 'utf-8');
       if (minify) {
         styleIn = await minifyCSS(styleIn);
