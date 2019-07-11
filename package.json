@@ -22,7 +22,6 @@
     "defined": "^1.0.0",
     "express": "^4.17.1",
     "get-port": "^5.0.0",
-    "hard-rejection": "^2.1.0",
     "internal-ip": "^4.3.0",
     "loud-rejection": "^2.1.0",
     "minimist": "^1.2.0",

@@ -3,7 +3,6 @@
 const fika = require('./fika');
 const minimist = require('minimist');
 const loudRejection = require('loud-rejection');
-// const hardRejection = require('hard-rejection');
 const logger = require('@parcel/logger');
 
 module.exports = cli;
