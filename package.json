@@ -1,0 +1,43 @@
+{
+  "name": "@mattdesl/fika",
+  "version": "1.0.0",
+  "description": "A figma plugin generator",
+  "main": "./src/fika.js",
+  "license": "MIT",
+  "bin": {
+    "fika": "./src/fika.js"
+  },
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "chokidar": "^3.0.2",
+    "clean-css": "^4.2.1",
+    "deep-equals": "0.0.2",
+    "defined": "^1.0.0",
+    "internal-ip": "^4.3.0",
+    "loud-rejection": "^2.1.0",
+    "maxstache": "^1.0.7",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "terser": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/fika.git"
+  },
+  "homepage": "https://github.com/mattdesl/fika",
+  "bugs": {
+    "url": "https://github.com/mattdesl/fika/issues"
+  }
+}
