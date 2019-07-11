@@ -1,1 +1,0 @@
-{"id":"test-plugin/test-plugin.renderer.js","dependencies":[{"name":"/projects/2017/fika/package.json","includedInParent":true,"mtime":1562849913253}],"generated":{"js":"/* The renderer script */\nconsole.log('hi from renderer');"},"sourceMaps":null,"error":null,"hash":"cee336f7a2178052d0c0dd13c2885ab1","cacheData":{"env":{}}}

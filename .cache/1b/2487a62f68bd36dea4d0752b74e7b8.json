@@ -1,1 +1,0 @@
-{"id":"test-plugin/test-plugin.js","dependencies":[{"name":"/projects/2017/fika/package.json","includedInParent":true,"mtime":1562849913253}],"generated":{"js":"/* The main script */\nfigma.showUI(__html__);"},"sourceMaps":null,"error":null,"hash":"a6e8bbc68f5ce0953246f2cf83fce758","cacheData":{"env":{}}}
