@@ -5,7 +5,7 @@
   "main": "./src/fika.js",
   "license": "MIT",
   "bin": {
-    "fika": "./src/fika.js"
+    "fika": "./src/cli.js"
   },
   "author": {
     "name": "Matt DesLauriers",
