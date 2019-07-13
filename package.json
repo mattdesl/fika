@@ -1,6 +1,6 @@
 {
   "name": "@mattdesl/fika",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A figma plugin generator",
   "main": "./src/fika.js",
   "license": "MIT",
