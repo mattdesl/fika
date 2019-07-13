@@ -24,20 +24,25 @@ Or, you can create a new folder repository per plugin.
 The following will generate `./src/my-plugin` and start a development server.
 
 ```sh
-fika my-plugin --init --name="Cool Plugin"
+fika my-plugin --init
 ```
+
+Or, omit the `--init` flag to continue developing an existing plugin.
 
 Other examples:
 
 ```sh
-# a plugin without HTML
-fika some-command --init --no-ui
+# use a different name when generating the plugin
+fika some-plugin --init --name="My Cool Plugin"
 
-# start developing an existing plugin
+# generate a plugin without HTML
+fika my-cool-plugin --init --no-ui
+
+# continue developing an existing plugin
 fika my-existing-plugin
 
 # use a different root folder than ./src
-fika lib/my-plugin
+fika lib/my-plugin --init
 ```
 
 You can open [http://localhost:9966/](http://localhost:9966/) to test your UI, and edit the files inside `./src/my-plugin` to see them reload.

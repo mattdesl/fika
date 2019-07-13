@@ -1,6 +1,7 @@
 const ParcelBundler = require('parcel-bundler');
 const maxstache = require('maxstache');
 const path = require('path');
+const titleCase = require('title-case');
 const fileWatch = require('./file-watch');
 const fs = require('fs');
 const terser = require('terser');
@@ -54,7 +55,7 @@ async function fika (plugin, opt = {}) {
 
   const pluginIndex = path.join(pluginDir, 'index.html');
   const pluginSlug = slugify(path.basename(srcDir));
-  const name = opt.name || pluginSlug;
+  const name = opt.name || titleCase(pluginSlug);
   const minify = defined(opt.minify, Boolean(isBuild));
 
   await mkdirp(srcDir);
