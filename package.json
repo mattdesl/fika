@@ -24,6 +24,7 @@
     "get-port": "^5.0.0",
     "internal-ip": "^4.3.0",
     "loud-rejection": "^2.1.0",
+    "maxstache": "^1.0.7",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "parcel-bundler": "^1.12.3",

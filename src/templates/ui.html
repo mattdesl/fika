@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+
+    <!-- Normalize the CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Include Figma UI CSS -->
+    <link rel="stylesheet" href="https://static.figma.com/api/figma-extension-api-0.0.1.css">
+
+    <!-- Also include the "Inter" font for consistency with Figma -->
+    <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style:  normal;
+      font-weight: 400;
+      src: url("https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.7") format("woff2"),
+           url("https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.7") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style:  normal;
+      font-weight: 500;
+      src: url("https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.7") format("woff2"),
+           url("https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.7") format("woff");
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style:  normal;
+      font-weight: 600;
+      src: url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.7") format("woff2"),
+           url("https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.7") format("woff");
+    }
+
+    /* Apply font to your UI */
+    body {
+      font: normal 400 14px "Inter", "Roboto", sans-serif;
+    }
+
+    /* Also override Figma's API CSS with Inter. */
+    input[type='text'], input, textarea, select {
+      font-family:inherit;
+    }
+    </style>
+  </head>
+  <body>
+    <p>👋 Hello from your plugin UI.</p>
+    <script src={{entry}}></script>
+  </body>
+</html>

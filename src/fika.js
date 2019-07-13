@@ -1,4 +1,5 @@
 const ParcelBundler = require('parcel-bundler');
+const maxstache = require('maxstache');
 const path = require('path');
 const fileWatch = require('./file-watch');
 const fs = require('fs');
@@ -308,14 +309,23 @@ Enter Ctrl + C in your shell to stop the server.\n`);
     const scriptFile = manifest.main ? path.join(srcDir, manifest.main) : null;
     const htmlFile = manifest.ui ? path.join(srcDir, manifest.ui) : null;
     const manifestFile = path.join(srcDir, `manifest.json`);
-    // TODO: fill in templates
     await safeWrite(manifestFile, JSON.stringify(manifest, null, 2));
-    if (scriptFile) await safeWrite(scriptFile, '/* The main script */\n');
+    if (scriptFile) {
+      const templateFileName = htmlFile ? 'plugin-with-ui.js' : 'plugin.js';
+      const scriptSrc = await readFile(path.join(__dirname, 'templates', templateFileName));
+      await safeWrite(scriptFile, scriptSrc);
+    }
     if (htmlFile) {
       const rendererFile = `${pluginSlug}.ui${ext}`;
       const htmlRendererFile = path.join(srcDir, rendererFile);
-      await safeWrite(htmlFile, `<html>\n  <body>\n    <script src="${rendererFile}"></script>\n  </body>\n</html>\n`);
-      await safeWrite(htmlRendererFile, `/* The UI script */\n`);
+      const htmlIn = await readFile(path.join(__dirname, 'templates/ui.html'), 'utf-8');
+      const htmlSrc = maxstache(htmlIn, {
+        title: pluginSlug,
+        entry: JSON.stringify(encodeURI(rendererFile))
+      });
+      const rendererSrc = await readFile(path.join(__dirname, 'templates/ui.js'));
+      await safeWrite(htmlFile, htmlSrc);
+      await safeWrite(htmlRendererFile, rendererSrc);
     }
   }
 }
