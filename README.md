@@ -1,6 +1,6 @@
 # fika
 
-A figma plugin generator using [Parcel](https://parceljs.org/).
+A small figma plugin generator using [Parcel](https://parceljs.org/).
 
 #### 1. Install
 
@@ -17,9 +17,11 @@ mkdir figma-plugins
 cd figma-plugins
 ```
 
+Or, you can create a new folder repository per plugin.
+
 #### 3. Generate a new Plugin
 
-This will generate `./src/my-plugin` and start a development server.
+The following will generate `./src/my-plugin` and start a development server.
 
 ```sh
 fika my-plugin --init --name="Cool Plugin"
@@ -52,7 +54,7 @@ Kill the server and run the following to build a smaller and more optimized prod
 fika my-plugin --build
 ```
 
-This will generate assets into `./dist/my-plugin`.
+This will generate assets into `./dist/my-plugin`. You can then publish your plugin!
 
 ## License
 
