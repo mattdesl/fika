@@ -49,7 +49,9 @@ You can open [http://localhost:9966/](http://localhost:9966/) to test your UI, a
 
 #### 4. Test Build in Figma
 
-Open Figma, choose Add Plugin From File and select the built `./dist/my-plugin/manifest.json` (notice **dist** not **src**).
+Once you've generated a `./dist` folder, open a project in Figma Desktop, select Menu > Plugins > Development > New Plugin. Click "Choose a manifest.json" and find the `manifest.json` file in `./dist/my-plugin/manifest.json`. (notice **dist** not **src**).
+
+Now you can run the plugin via Menu or Right Click > Plugins > Image Palette. You can also open the Console via that context menu, and re-run the last plugin via Cmd + Option + P.
 
 #### 5. Build for Production
 

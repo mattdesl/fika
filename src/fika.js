@@ -23,7 +23,7 @@ const logger = require('@parcel/logger');
 
 module.exports = fika;
 async function fika (plugin, opt = {}) {
-  const api = opt.api || '0.6.0';
+  const api = opt.api || '1.0.0';
   const cwd = process.cwd();
   const ext = opt.ts ? '.ts' : '.js';
   let {
@@ -342,7 +342,7 @@ async function writePackageJSON (dir) {
       },
       keywords: [],
       browserslist: [
-        "last 1 Chrome version"
+        'last 1 Chrome version'
       ]
     }, null, 2));
   }
